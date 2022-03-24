@@ -2,12 +2,13 @@ let previousUrl = "";
 const observer = new MutationObserver(function (mutations) {
   if (location.href !== previousUrl) {
     previousUrl = location.href;
-    postData("http://localhost:6420/visitedUrl", {
-      visitedUrl: location.href,
-    }).then((data) => {
-      console.log("Server response > > >", data);
-      createPopup();
-    });
+    console.log(`visited url ${previousUrl}`);
+    // postData("http://localhost:6420/visitedUrl", {
+    //   visitedUrl: location.href,
+    // }).then((data) => {
+    //   console.log("Server response > > >", data);
+    //   createPopup();
+    // });
   }
 });
 
