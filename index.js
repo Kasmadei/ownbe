@@ -193,6 +193,6 @@ app.post("/payments/state", (req, res) => {
   })();
 });
 
-app.listen(port, () => {
+app.listen(process.env.port || port, () => {
   console.log(`Server listening on port: ${port}`);
 });
