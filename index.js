@@ -10,6 +10,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => res.send('It works!'));
+
 app.get("/test.js", (req, res) => {
   let fileContent = "";
   const filePath = "./test.js";
